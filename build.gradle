@@ -26,5 +26,9 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    /* You should place rest-assured before the JUnit dependency declaration in your 
+     * pom.xml / build.gradle in order to make sure that the correct version of Hamcrest is used.
+     */
+    testCompile 'io.rest-assured:rest-assured:3.0.3'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
